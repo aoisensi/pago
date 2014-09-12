@@ -21,7 +21,7 @@ func handlerPage(w http.ResponseWriter, r *http.Request) {
 }
 
 func loadPage(path string) (*Page, error) {
-    path = "./page" + path
+    path = pagePath + path
     page, err := loadTextPage(path)
     if page != nil {
         return page, nil
